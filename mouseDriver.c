@@ -119,7 +119,7 @@ int main() {
 
         } else if (data[1] == 0x80) {
             ev.type = EV_KEY;
-            ev.code = BTN_TASK; // Button 1
+            ev.code = BTN_TASK; // Button 2
             ev.value = 1; // Press
             write(uinput_fd, &ev, sizeof(ev));
 
@@ -131,7 +131,7 @@ int main() {
             
         } else if (data[1] == 0x08) {
             ev.type = EV_KEY;
-            ev.code = BTN_FORWARD; // Button 1
+            ev.code = BTN_FORWARD; // Button 3
             ev.value = 1; // Press
             write(uinput_fd, &ev, sizeof(ev));
 
@@ -149,12 +149,12 @@ int main() {
 
 
             ev.type = EV_KEY;
-            ev.code = BTN_TASK; // Button 1
+            ev.code = BTN_TASK; // Button 2
             ev.value = 0; // Release
             write(uinput_fd, &ev, sizeof(ev));
 
             ev.type = EV_KEY;
-            ev.code = BTN_FORWARD; // Button 1
+            ev.code = BTN_FORWARD; // Button 3
             ev.value = 0; // Release
             write(uinput_fd, &ev, sizeof(ev));
 
