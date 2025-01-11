@@ -1,0 +1,9 @@
+[Unit]
+Description=Userspace Driver for T16 Gaming Mouse
+
+[Service]
+ExecStart=/usr/bin/mouseDriver
+
+
+[Install]
+WantedBy=default.target
