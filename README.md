@@ -14,7 +14,7 @@ systemctl enable MouseDriver.service   #(optional) starts the service at system 
 
 # Build
 
-To compile the code yourself download the [Source code of the lates releas](https://github.com/Heniks07/T16-Linux-Driver/releases/tag/v1.0.0). Then unpack the `.zip` or `.tar.gz` file and execute 
+To compile the code yourself download the Source code. Then unpack the `.zip` or `.tar.gz` file and execute 
 ```
-gcc -o mouse_monitor mouse_monitor.c -lusb-1.0
+gcc -o mouseDriver mouseDriver.c -lusb-1.0
 ```
