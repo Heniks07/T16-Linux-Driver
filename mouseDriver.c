@@ -106,7 +106,7 @@ int main() {
 
 
         r = libusb_interrupt_transfer(handle, 0x82, data, sizeof(data), &transferred, 0);
-        if (data[1] == 0x40) {
+        if (data[1] == 0x0C) {
             ev.type = EV_KEY;
             ev.code = BTN_EXTRA; // Button 1
             ev.value = 1; // Press
@@ -117,9 +117,9 @@ int main() {
            ev.value = 0;
            write(uinput_fd, &ev, sizeof(ev));
 
-        } else if (data[1] == 0x80) {
+        } else if (data[1] == 0x0A) {
             ev.type = EV_KEY;
-            ev.code = BTN_TASK; // Button 2
+            ev.code = BTN_TASK; // Button 1
             ev.value = 1; // Press
             write(uinput_fd, &ev, sizeof(ev));
 
